@@ -1,0 +1,26 @@
+.movie_box {
+  background: #a39494;
+  width: 80%;
+  padding: 20px;
+  margin: 50px;
+}
+.movie_img {
+  position: relative;
+  top: -60px;
+  width: 40%;
+}
+.movie_info {
+  border: 1px solid red;
+  box-sizing: border-box;
+  /* width: 50%;
+  position: relative;
+  top: -350px;
+  left:270px */
+}
+.genres {
+  display: flex;
+  list-style: none;
+}
+.genres_list {
+  padding-right: 15px;
+}

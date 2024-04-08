@@ -1,0 +1,25 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.loading_text{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px;
+}
+/* .content_box{
+  background-color: antiquewhite;
+} */
+.title{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  padding-bottom: 50px;
+  color: #333;
+}
+.movies{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

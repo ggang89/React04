@@ -1,8 +1,13 @@
 .movie_box {
-  background: #a39494;
-  width: 80%;
+  background: #faf9f9;
+  width: 40%;
   padding: 20px;
-  margin: 50px;
+  margin: 40px;
+  box-shadow: 20px 15px 5px #ccc;
+}
+.movie_title {
+  display: flex;
+  flex-wrap: wrap;
 }
 .movie_img {
   position: relative;
@@ -10,17 +15,29 @@
   width: 40%;
 }
 .movie_info {
-  border: 1px solid red;
-  box-sizing: border-box;
-  /* width: 50%;
+  width: 50%;
+  height: 200px;
   position: relative;
-  top: -350px;
-  left:270px */
+  left: 30px;
+}
+.movie_info > h2 {
+  text-decoration: none;
+  list-style: none;
+}
+.movie_info > h2 > a {
+  color: #333;
 }
 .genres {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
+  padding: 0;
+  font-style: italic;
 }
 .genres_list {
-  padding-right: 15px;
+  padding-right: 12px;
+}
+.summary {
+  position: relative;
+  top: -30px;
 }

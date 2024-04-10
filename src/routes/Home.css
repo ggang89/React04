@@ -1,6 +1,7 @@
 body{
   margin: 0;
   padding: 0;
+ 
 }
 .loading_text{
   font-size: 40px;
@@ -8,9 +9,7 @@ body{
   text-align: center;
   padding: 30px;
 }
-/* .content_box{
-  background-color: antiquewhite;
-} */
+
 .title{
   text-align: center;
   font-size: 50px;

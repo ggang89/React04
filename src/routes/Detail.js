@@ -7,18 +7,19 @@ function Detail() {
   const [loading, getLoading] = useState(true);
   const [movieInfo, getMovieInfo] = useState([]);
   const [genres, getGenres] = useState([]);
-  const getMovie = async () => {
-    const json = await (
-      await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
-    ).json();
-    getLoading(false);
-    getMovieInfo(json.data.movie);
-    getGenres(json.data.movie.genres);
-    console.log(json);
-  };
+  
   useEffect(() => {
+    const getMovie = async () => {
+      const json = await (
+        await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
+      ).json();
+      getLoading(false);
+      getMovieInfo(json.data.movie);
+      getGenres(json.data.movie.genres);
+      console.log(json);
+    };
     getMovie();
-  }, []);
+  }, [id]);
   return (
     <div className="detail_page">
       {loading ? (

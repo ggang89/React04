@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import "./Detail.css";
 
@@ -8,18 +8,19 @@ function Detail() {
   const [movieInfo, getMovieInfo] = useState([]);
   const [genres, getGenres] = useState([]);
   
-  useEffect(() => {
-    const getMovie = async () => {
-      const json = await (
-        await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
-      ).json();
-      getLoading(false);
-      getMovieInfo(json.data.movie);
-      getGenres(json.data.movie.genres);
-      console.log(json);
-    };
-    getMovie();
+  const getMovie = useCallback(async () => {
+    const json = await (
+      await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
+    ).json();
+    getLoading(false);
+    getMovieInfo(json.data.movie);
+    getGenres(json.data.movie.genres);
+    console.log(json);
   }, [id]);
+
+  useEffect(() => {
+    getMovie();
+  }, [getMovie]);
   return (
     <div className="detail_page">
       {loading ? (
